@@ -196,6 +196,27 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.contactParagraph {
+  margin: 15px;
+  text-align: center;
+}
+
+.contactBox {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 30px;
+  border: 3px solid rgb(236, 76, 76);
+  padding: 15px;  
+  border-radius: 5px;
+
+}
+
+.emailIcon {
+  height: 2rem;
 }
 
 footer {
