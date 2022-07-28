@@ -191,6 +191,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 10rem;
 }
 
 .soshProject {
@@ -200,8 +201,16 @@ nav {
   font-size: 3rem;
 }
 
+.cvAppProject {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 3rem;
+  text-align: right;
+}
+
 .projectTitle {
-  margin: 25px 25px 15px 0px;
+  margin: 15px 0px;
   font-weight: bold;
 }
 

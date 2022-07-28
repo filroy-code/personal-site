@@ -1,5 +1,6 @@
 import React from "react";
 import soshPreview from "../resources/soshPreview.png";
+import cvAppPreview from "../resources/cvApp.png";
 
 export default function Projects() {
   return (
@@ -27,6 +28,27 @@ export default function Projects() {
             src={soshPreview}
             alt="Sosh App Preview"
           ></img>
+        </div>
+      </div>
+      <div className="cvAppProject">
+        <div className="projectContainer">
+          <img
+            className="projectPreview"
+            src={cvAppPreview}
+            alt="CV App Preview"
+          ></img>
+        </div>
+        <div className="projectTextContainer">
+          <div className="projectPreviewText">
+            <div className="projectTitle">CV Generator</div>
+            <div className="projectSubheading">
+              A responsive resume generator webapp.
+            </div>
+            <p className="projectInfo">Built with React.</p>
+          </div>
+          <div></div>
+          <p className="projectLink">Live App</p>
+          <p className="projectLink">Learn More</p>
         </div>
       </div>
     </div>
