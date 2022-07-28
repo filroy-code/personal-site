@@ -5,9 +5,13 @@ export default function HeroText() {
 
   React.useEffect(() => setLoading(false), []);
   return (
-    <div className={loading ? "heroTextLoading" : "heroText"}>
-      <div className="heroHeading">Hi, I'm Fil.</div>
-      <div className="heroHeading">I'm a full stack web developer.</div>
+    <div className="heroText">
+      <div className={loading ? "heroHeadingLoading" : "heroHeading"}>
+        Hi, I'm <span style={{ color: "rgb(236, 76, 76)" }}>Fil.</span>
+      </div>
+      <div className={loading ? "heroHeadingLoading" : "heroHeading"}>
+        I'm a full stack web developer.
+      </div>
       <div className="goToContent">View my work ↓</div>
     </div>
   );

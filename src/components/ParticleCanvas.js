@@ -17,6 +17,7 @@ export default function ParticleCanvas() {
     window.addEventListener("resize", () => {
       canvasRef.current.height = window.innerHeight;
       canvasRef.current.width = window.innerWidth;
+      ctx.fillStyle = "#777";
     });
 
     let mouse = {
@@ -45,8 +46,6 @@ export default function ParticleCanvas() {
         }
       });
     });
-
-    ctx.fillStyle = "white";
 
     function update(particle) {
       if (!particle.mouseParticle) {
@@ -81,9 +80,7 @@ export default function ParticleCanvas() {
       requestAnimationFrame(animate);
     }
 
-    ctx.globalCompositeOperation = "lighter"; // AKA add / linear-dodge
     ctx.fillStyle = "#777";
-    ctx.fillRect(90, 20, 130, 130);
 
     function drawLines(particleArray) {
       for (let i = 0; i < particleArray.length; i++) {

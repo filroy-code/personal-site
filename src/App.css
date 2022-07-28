@@ -37,9 +37,10 @@ body {
   z-index: 10;
   height: 30%;
   font-weight: lighter;
+  transition: opacity 1.8s;
 }
 
-.heroTextLoading {
+.heroHeadingLoading {
   transition: all 1.8s;
   opacity: 0;
   transform: translateX(-20%);
@@ -57,16 +58,22 @@ body {
 .goToContent {
   margin: 25px;
   padding: 8px 30px;
-  font-size: 2rem;
+  font-size: 1.72rem;
   border: 3px solid rgb(236, 76, 76);
   color: rgb(236, 76, 76);
   border-radius: 5px;
   transition: all 0.3s;
   transform: scale(1);
+  user-select: none;
 }
 
 .goToContent:hover {
   transform: scale(1.03);
+  cursor: pointer;
+}
+
+.goToContent:active {
+  transform: scale(1.015);
   cursor: pointer;
 }
 
@@ -81,7 +88,7 @@ body {
   }
 
   .goToContent {
-    font-size: 2rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -91,7 +98,7 @@ body {
   }
 
   .goToContent {
-    font-size: 1.5rem;
+    font-size: 1.42rem;
   }
 }
 
@@ -101,7 +108,7 @@ body {
   }
 
   .goToContent {
-    font-size: 1.3rem;
+    font-size: 1.22rem;
   }
 }
 
@@ -111,6 +118,6 @@ body {
   }
 
   .goToContent {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 }
