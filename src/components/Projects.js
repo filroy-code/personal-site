@@ -22,7 +22,7 @@ export default function Projects() {
           <p className="projectLink">Live App</p>
           <p className="projectLink">Learn More</p>
         </div>
-        <div className="projectContainer">
+        <div className="rightProjectContainer">
           <img
             className="projectPreview"
             src={soshPreview}
@@ -31,7 +31,7 @@ export default function Projects() {
         </div>
       </div>
       <div className="cvAppProject">
-        <div className="projectContainer">
+        <div className="leftProjectContainer">
           <img
             className="projectPreview"
             src={cvAppPreview}
