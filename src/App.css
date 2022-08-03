@@ -304,6 +304,18 @@ footer {
   margin: 20px;
 }
 
+@media screen and (max-width: 1250px) {
+  .projectPreview {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .projectPreview {
+    width: 30rem;
+  }
+}
+
 @media screen and (max-width: 1060px) {
 
 .techBox {
@@ -323,11 +335,41 @@ footer {
   margin: 30px;
 }
 
+.projectPreview {
+  width: 30rem;
+}
+
+.projectPreview {
+  width: 25rem;
+}
+
 }
 
 @media screen and (max-width: 910px) {
   .aboutMain {
     flex-direction: column;
+  }
+
+  .soshProject {
+    flex-direction: column;
+  }
+
+  .cvAppProject {
+    flex-direction: column;
+  }
+
+  .projectPreview {
+    width: 30rem;
+  }
+
+  .rightProjectContainer {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .leftProjectContainer {
+    justify-content: center;
+    padding: 20px;
   }
 }
 
@@ -357,6 +399,10 @@ footer {
   .navItems {
     margin-right: 0;
   }
+
+  .projectPreview {
+    width: 25rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -375,6 +421,10 @@ footer {
   .techColumn {
     gap: 0.5rem;
     margin: 15px;
+  }
+
+  .projectPreview {
+    width: 20rem;
   }
 }
 
