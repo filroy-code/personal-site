@@ -27,18 +27,30 @@ const Projects = React.forwardRef((props, ref) => {
             </p>
           </div>
           <div></div>
-          <a href="https://sosh-media.netlify.app/">
+          <a
+            href="https://sosh-media.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Live App
             </Button>
           </a>
-          <a href="https://github.com/filroy-code">
+          <a
+            href="https://github.com/filroy-code"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Learn More
             </Button>
           </a>
         </div>
-        <a href="https://sosh-media.netlify.app/">
+        <a
+          href="https://sosh-media.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="rightProjectContainer">
             <img
               className="projectPreview"
@@ -49,7 +61,11 @@ const Projects = React.forwardRef((props, ref) => {
         </a>
       </div>
       <div className="cvAppProject">
-        <a href="https://filroy-code.github.io/cv_app/">
+        <a
+          href="https://filroy-code.github.io/cv_app/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="leftProjectContainer">
             <img
               className="projectPreview"
@@ -67,12 +83,20 @@ const Projects = React.forwardRef((props, ref) => {
             <p className="projectInfo">Built with React.</p>
           </div>
           <div></div>
-          <a href="https://filroy-code.github.io/cv_app/">
+          <a
+            href="https://filroy-code.github.io/cv_app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Live App
             </Button>
           </a>
-          <a href="https://github.com/filroy-code">
+          <a
+            href="https://github.com/filroy-code"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Learn More
             </Button>
@@ -89,18 +113,26 @@ const Projects = React.forwardRef((props, ref) => {
             <p className="projectInfo">Built with React and D3.js.</p>
           </div>
           <div></div>
-          <a href="https://nba-pct.netlify.app/">
+          <a
+            href="https://nba-pct.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Live App
             </Button>
           </a>
-          <a href="https://github.com/filroy-code">
+          <a
+            href="https://github.com/filroy-code"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button style={buttonStyle} variant="contained">
               Learn More
             </Button>
           </a>
         </div>
-        <a href="https://nba-pct.netlify.app/">
+        <a href="https://nba-pct.netlify.app/" target="_blank" rel="noreferrer">
           <div className="rightProjectContainer">
             <img
               className="projectPreview"
