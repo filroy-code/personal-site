@@ -4,7 +4,7 @@ import cvAppPreview from "../resources/cvApp.png";
 import nbaAppPreview from "../resources/nbaAppPreview.png";
 import { Button } from "@mui/material";
 
-export default function Projects() {
+const Projects = React.forwardRef((props, ref) => {
   const buttonStyle = {
     backgroundColor: "rgb(236, 76, 76)",
     color: "white",
@@ -12,7 +12,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects">
+    <div ref={ref} id="projects">
       <div className="sectionHeading">Projects</div>
       <div className="soshProject">
         <div className="projectTextContainer">
@@ -112,4 +112,6 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+});
+
+export default Projects;

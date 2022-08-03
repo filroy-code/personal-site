@@ -1,9 +1,9 @@
 import React from "react";
 import emailIcon from "../resources/email.png";
 
-export default function Contact() {
+const Contact = React.forwardRef((props, ref) => {
   return (
-    <div id="contact">
+    <div ref={ref} id="contact">
       <div className="sectionHeading">Contact</div>
       <div className="contactParagraph">
         Want to collaberate? Questions about my journey? Have an opportunity
@@ -15,4 +15,6 @@ export default function Contact() {
       </div>
     </div>
   );
-}
+});
+
+export default Contact;

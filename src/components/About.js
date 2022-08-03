@@ -11,9 +11,9 @@ import gitIcon from "../resources/git.png";
 import pythonIcon from "../resources/python.webp";
 import webpackIcon from "../resources/webpack.png";
 
-export default function About() {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div id="about">
+    <div ref={ref} id="about">
       <div className="sectionHeading">About</div>
       <div className="aboutMain">
         <div className="bioSection">
@@ -78,4 +78,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+});
+
+export default About;
