@@ -1,4 +1,5 @@
 import React from "react";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function ParticleCanvas() {
   const canvasRef = React.useRef(null);
@@ -7,7 +8,10 @@ export default function ParticleCanvas() {
     return Math.floor(Math.random() * max);
   }
 
+  const isDesktop = useMediaQuery("(max-width: 960px)");
+
   const particleSize = 2;
+  const particleNumber = isDesktop ? 240 : 50;
 
   // assigns canvas ref on component render, contains canvas context operations
   React.useEffect(() => {
@@ -27,7 +31,7 @@ export default function ParticleCanvas() {
     let ctx = canvasRef.current.getContext("2d");
 
     const particles = [];
-    for (let i = 0; i < 240; i++) {
+    for (let i = 0; i < particleNumber; i++) {
       particles.push({
         x: getRandomInt(canvasRef.current.width),
         y: getRandomInt(canvasRef.current.width),
