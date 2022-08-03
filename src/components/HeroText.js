@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeroText() {
+export default function HeroText(props) {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => setLoading(false), []);
@@ -12,7 +12,17 @@ export default function HeroText() {
       <div className={loading ? "heroHeadingLoading" : "heroHeading"}>
         I'm a full stack web developer.
       </div>
-      <div className="goToContent">View my work ↓</div>
+      <div
+        onClick={() =>
+          props.projectsLink.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
+        }
+        className="goToContent"
+      >
+        View my work ↓
+      </div>
     </div>
   );
 }

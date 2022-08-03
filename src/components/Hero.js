@@ -6,7 +6,7 @@ const Hero = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} id="hero">
       <ParticleCanvas></ParticleCanvas>
-      <HeroText></HeroText>
+      <HeroText projectsLink={props.projectsLink}></HeroText>
     </div>
   );
 });

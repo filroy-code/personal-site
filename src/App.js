@@ -14,7 +14,7 @@ function App() {
   const contactLink = React.useRef();
   return (
     <div className="App">
-      <Hero ref={homeLink}></Hero>
+      <Hero projectsLink={projectsLink} ref={homeLink}></Hero>
       <Header
         homeLink={homeLink}
         aboutLink={aboutLink}
