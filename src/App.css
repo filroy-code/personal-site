@@ -200,6 +200,13 @@ nav {
   font-size: 3rem;
 }
 
+.nbaProject {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 3rem;
+}
+
 .cvAppProject {
   display: flex;
   justify-content: space-between;
@@ -351,6 +358,10 @@ footer {
   }
 
   .soshProject {
+    flex-direction: column;
+  }
+
+  .nbaProject {
     flex-direction: column;
   }
 
