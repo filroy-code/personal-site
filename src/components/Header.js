@@ -1,9 +1,47 @@
 import React from "react";
 
 export default function Header(props) {
+  let navItemsRef = React.useRef();
+  let observer = new IntersectionObserver(
+    (entry) => {
+      console.log(entry);
+      if (
+        (entry[0].target.id === "hero" && entry[0].isIntersecting) ||
+        (entry.length > 1 && entry[1].isIntersecting)
+      ) {
+        navItemsRef.current.childNodes[0].classList.add("active");
+        navItemsRef.current.childNodes[1].classList.remove("active");
+        navItemsRef.current.childNodes[2].classList.remove("active");
+        navItemsRef.current.childNodes[3].classList.remove("active");
+      } else if (entry[0].target.id === "about" && entry[0].isIntersecting) {
+        navItemsRef.current.childNodes[1].classList.add("active");
+        navItemsRef.current.childNodes[0].classList.remove("active");
+        navItemsRef.current.childNodes[2].classList.remove("active");
+        navItemsRef.current.childNodes[3].classList.remove("active");
+      } else if (entry[0].target.id === "projects" && entry[0].isIntersecting) {
+        navItemsRef.current.childNodes[2].classList.add("active");
+        navItemsRef.current.childNodes[1].classList.remove("active");
+        navItemsRef.current.childNodes[0].classList.remove("active");
+        navItemsRef.current.childNodes[3].classList.remove("active");
+      } else if (entry[0].target.id === "contact" && entry[0].isIntersecting) {
+        navItemsRef.current.childNodes[3].classList.add("active");
+        navItemsRef.current.childNodes[1].classList.remove("active");
+        navItemsRef.current.childNodes[2].classList.remove("active");
+        navItemsRef.current.childNodes[0].classList.remove("active");
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  React.useEffect(() => {
+    observer.observe(props.homeLink.current);
+    observer.observe(props.aboutLink.current);
+    observer.observe(props.projectsLink.current);
+    observer.observe(props.contactLink.current);
+  });
   return (
     <nav>
-      <div className="navItems">
+      <div ref={navItemsRef} className="navItems">
         <div
           onClick={() =>
             props.homeLink.current.scrollIntoView({

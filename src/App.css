@@ -102,6 +102,11 @@ nav {
   gap: 1.3rem;
   font-size: 1.5rem;
   cursor: pointer;
+  user-select: none;
+}
+
+.active {
+  color: rgb(236, 76, 76);
 }
 
 #about {
@@ -219,6 +224,7 @@ nav {
 .projectTitle {
   margin: 15px 0px;
   font-weight: bold;
+  color: rgb(236, 76, 76);
 }
 
 .projectSubheading {
