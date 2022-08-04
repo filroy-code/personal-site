@@ -121,7 +121,7 @@ nav {
 .sectionHeading {
   font-size: 4.5rem;
   font-weight: 700;
-  margin-top: 8rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   z-index: 2;
 }
@@ -191,7 +191,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10rem;
+  gap: 0rem;
 }
 
 .soshProject {
@@ -252,14 +252,16 @@ nav {
   display: flex;
   background-color: rgb(131, 197, 190);
   position: relative;
-  padding: 1.5rem 0.7rem 1.5rem 4rem;;
+  padding: 1.5rem 0.7rem 1.5rem 4rem;
+  margin-bottom: 5rem;
 }
 
 .leftProjectContainer {
   display: flex;
   background-color: rgb(131, 197, 190);
   position: relative;
-  padding: 1.5rem 4rem 1.5rem 0.7rem;;
+  padding: 1.5rem 4rem 1.5rem 0.7rem;
+  margin-bottom: 5rem;
 }
 
 .projectPreview {

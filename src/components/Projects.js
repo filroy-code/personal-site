@@ -37,7 +37,7 @@ const Projects = React.forwardRef((props, ref) => {
             </Button>
           </a>
           <a
-            href="https://github.com/filroy-code"
+            href="https://github.com/filroy-code/sosh-media-frontend"
             target="_blank"
             rel="noreferrer"
           >
