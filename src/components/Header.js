@@ -4,7 +4,6 @@ export default function Header(props) {
   let navItemsRef = React.useRef();
   let observer = new IntersectionObserver(
     (entry) => {
-      console.log(entry);
       if (
         (entry[0].target.id === "hero" && entry[0].isIntersecting) ||
         (entry.length > 1 && entry[1].isIntersecting)
