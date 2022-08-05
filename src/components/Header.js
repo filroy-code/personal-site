@@ -63,7 +63,7 @@ const Header = forwardRef((props, ref) => {
         activateContact();
       }
     },
-    { root: null, rootMargin: "60px", threshold: 0.0001 }
+    { root: null, rootMargin: "-60px", threshold: 0.0001 }
   );
 
   React.useEffect(() => {
