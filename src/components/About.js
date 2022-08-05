@@ -24,7 +24,7 @@ const About = React.forwardRef((props, ref) => {
             satisfaction that comes with seeing my abilities grow motivates me
             to seek out new challenges in my personal and professional life. In
             my free time I like to keep active with long-distance running, and
-            develop my craft as a musician.
+            developing my craft as a musician.
           </p>
         </div>
         <div className="technologies">
