@@ -12,14 +12,17 @@ function App() {
   const aboutLink = React.useRef();
   const projectsLink = React.useRef();
   const contactLink = React.useRef();
+  const observerRoot = React.useRef();
   return (
     <div className="App">
+      <div ref={observerRoot} className="observerRoot"></div>
       <Hero projectsLink={projectsLink} ref={homeLink}></Hero>
       <Header
         homeLink={homeLink}
         aboutLink={aboutLink}
         projectsLink={projectsLink}
         contactLink={contactLink}
+        observerRoot={observerRoot}
       ></Header>
       <About ref={aboutLink}></About>
       <Projects ref={projectsLink}></Projects>

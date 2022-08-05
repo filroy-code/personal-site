@@ -79,7 +79,8 @@ export default function ParticleCanvas() {
         ctx.fillRect(particle.x, particle.y, particleSize, particleSize);
         update(particle);
       });
-      drawLines(particles);
+      // constellation effect if viewport is small.
+      canvasRef.current.width > 960 && drawLines(particles);
       requestAnimationFrame(animate);
     }
 

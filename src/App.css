@@ -96,6 +96,16 @@ nav {
   border: 1px solid black;
 }
 
+/*  .observerRoot {
+  position: fixed;
+  top: 25%;
+  margin: 0px;
+  padding: 0px;
+  border: 1px dashed white;
+  height: 1px;
+  width: 100%;
+} */
+
 .navItems {
   margin-right: 10rem;
   display: flex;
