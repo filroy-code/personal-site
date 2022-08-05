@@ -1,6 +1,6 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-export default function Header(props) {
+const Header = forwardRef((props, ref) => {
   let navItemsRef = React.useRef();
 
   function activateHome() {
@@ -73,7 +73,7 @@ export default function Header(props) {
     observer.observe(props.contactLink.current);
   });
   return (
-    <nav>
+    <nav ref={ref}>
       <div ref={navItemsRef} className="navItems">
         <div
           onClick={() => {
@@ -122,4 +122,6 @@ export default function Header(props) {
       </div>
     </nav>
   );
-}
+});
+
+export default Header;

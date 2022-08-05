@@ -6,7 +6,10 @@ const Hero = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} id="hero">
       <ParticleCanvas></ParticleCanvas>
-      <HeroText projectsLink={props.projectsLink}></HeroText>
+      <HeroText
+        projectsLink={props.projectsLink}
+        activateProjects={props.activateProjects}
+      ></HeroText>
     </div>
   );
 });

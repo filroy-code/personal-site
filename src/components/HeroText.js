@@ -13,12 +13,13 @@ export default function HeroText(props) {
         I'm a full stack web developer.
       </div>
       <div
-        onClick={() =>
+        onClick={() => {
           props.projectsLink.current.scrollIntoView({
             behavior: "smooth",
             block: "start",
-          })
-        }
+          });
+          props.activateProjects();
+        }}
         className="goToContent"
       >
         View my work ↓
