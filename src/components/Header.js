@@ -29,7 +29,7 @@ export default function Header(props) {
         navItemsRef.current.childNodes[0].classList.remove("active");
       }
     },
-    { threshold: 0.3 }
+    { threshold: 0.2, rootMargin: "-50px" }
   );
 
   React.useEffect(() => {
