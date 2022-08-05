@@ -2,6 +2,35 @@ import React from "react";
 
 export default function Header(props) {
   let navItemsRef = React.useRef();
+
+  function activateHome() {
+    navItemsRef.current.childNodes[0].classList.add("active");
+    navItemsRef.current.childNodes[1].classList.remove("active");
+    navItemsRef.current.childNodes[2].classList.remove("active");
+    navItemsRef.current.childNodes[3].classList.remove("active");
+  }
+
+  function activateAbout() {
+    navItemsRef.current.childNodes[1].classList.add("active");
+    navItemsRef.current.childNodes[0].classList.remove("active");
+    navItemsRef.current.childNodes[2].classList.remove("active");
+    navItemsRef.current.childNodes[3].classList.remove("active");
+  }
+
+  function activateProjects() {
+    navItemsRef.current.childNodes[2].classList.add("active");
+    navItemsRef.current.childNodes[1].classList.remove("active");
+    navItemsRef.current.childNodes[0].classList.remove("active");
+    navItemsRef.current.childNodes[3].classList.remove("active");
+  }
+
+  function activateContact() {
+    navItemsRef.current.childNodes[3].classList.add("active");
+    navItemsRef.current.childNodes[1].classList.remove("active");
+    navItemsRef.current.childNodes[2].classList.remove("active");
+    navItemsRef.current.childNodes[0].classList.remove("active");
+  }
+
   let observer = new IntersectionObserver(
     (entry) => {
       if (
@@ -10,40 +39,28 @@ export default function Header(props) {
           entry[1].isIntersecting &&
           entry[1].target.id === "hero")
       ) {
-        navItemsRef.current.childNodes[0].classList.add("active");
-        navItemsRef.current.childNodes[1].classList.remove("active");
-        navItemsRef.current.childNodes[2].classList.remove("active");
-        navItemsRef.current.childNodes[3].classList.remove("active");
+        activateHome();
       } else if (
         (entry[0].target.id === "about" && entry[0].isIntersecting) ||
         (entry.length > 1 &&
           entry[1].isIntersecting &&
           entry[1].target.id === "about")
       ) {
-        navItemsRef.current.childNodes[1].classList.add("active");
-        navItemsRef.current.childNodes[0].classList.remove("active");
-        navItemsRef.current.childNodes[2].classList.remove("active");
-        navItemsRef.current.childNodes[3].classList.remove("active");
+        activateAbout();
       } else if (
         (entry[0].target.id === "projects" && entry[0].isIntersecting) ||
         (entry.length > 1 &&
           entry[1].isIntersecting &&
           entry[1].target.id === "projects")
       ) {
-        navItemsRef.current.childNodes[2].classList.add("active");
-        navItemsRef.current.childNodes[1].classList.remove("active");
-        navItemsRef.current.childNodes[0].classList.remove("active");
-        navItemsRef.current.childNodes[3].classList.remove("active");
+        activateProjects();
       } else if (
         (entry[0].target.id === "contact" && entry[0].isIntersecting) ||
         (entry.length > 1 &&
           entry[1].isIntersecting &&
           entry[1].target.id === "contact")
       ) {
-        navItemsRef.current.childNodes[3].classList.add("active");
-        navItemsRef.current.childNodes[1].classList.remove("active");
-        navItemsRef.current.childNodes[2].classList.remove("active");
-        navItemsRef.current.childNodes[0].classList.remove("active");
+        activateContact();
       }
     },
     { root: props.observerRoot.current, threshold: 0.0001 }
@@ -59,42 +76,46 @@ export default function Header(props) {
     <nav>
       <div ref={navItemsRef} className="navItems">
         <div
-          onClick={() =>
+          onClick={() => {
             props.homeLink.current.scrollIntoView({
               behavior: "smooth",
               block: "start",
-            })
-          }
+            });
+            activateHome();
+          }}
         >
           Home
         </div>
         <div
-          onClick={() =>
+          onClick={() => {
             props.aboutLink.current.scrollIntoView({
               behavior: "smooth",
               block: "start",
-            })
-          }
+            });
+            activateAbout();
+          }}
         >
           About
         </div>
         <div
-          onClick={() =>
+          onClick={() => {
             props.projectsLink.current.scrollIntoView({
               behavior: "smooth",
               block: "start",
-            })
-          }
+            });
+            activateProjects();
+          }}
         >
           Projects
         </div>
         <div
-          onClick={() =>
+          onClick={() => {
             props.contactLink.current.scrollIntoView({
               behavior: "smooth",
               block: "start",
-            })
-          }
+            });
+            activateContact();
+          }}
         >
           Contact
         </div>
