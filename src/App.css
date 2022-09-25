@@ -40,26 +40,27 @@ body {
   z-index: 10;
   height: 30%;
   font-weight: lighter;
-  transition: opacity 1.8s;
+  transition: 0.6s;
+  width: 100vw;
 }
 
 .heroHeadingLoading {
-  transition: all 1.8s;
   opacity: 0;
-  transform: translateX(-20%);
+  filter: blur(4px);
+  transform: translateX(-100vw);
 }
 
 .heroHeading {
-  transition: opacity 1.8s;
+  transition: 0.6s;
   transform: translateX(0);
   opacity: 1;
-  font-size: 3.5rem;
   position: relative;
   pointer-events: none;
+  font-size: 3.5rem;
 }
 
 .goToContent {
-  margin: 25px;
+  margin: 28px;
   padding: 8px 30px;
   font-size: 1.72rem;
   border: 3px solid rgb(236, 76, 76);
@@ -68,6 +69,14 @@ body {
   transition: all 0.3s;
   transform: scale(1);
   user-select: none;
+  opacity: 0;
+  transition: 0.6s;
+  filter: blur(4px);
+}
+
+.visible {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 .goToContent:hover {
@@ -89,8 +98,8 @@ nav {
   justify-content: flex-end;
   align-items: center;
   padding: 22px;
-  background-color: #21212A;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+  background-color: #21212a;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   z-index: 10;
   opacity: 1;
   border: 1px solid black;
@@ -142,7 +151,7 @@ nav {
 }
 
 .sectionHeading::before {
-  content: '';
+  content: "";
   border-bottom: 18px solid rgb(236, 76, 76);
   width: 12rem;
   display: block;
@@ -304,7 +313,7 @@ nav {
   gap: 2rem;
   margin-top: 30px;
   border: 3px solid rgb(236, 76, 76);
-  padding: 15px;  
+  padding: 15px;
   border-radius: 5px;
   width: 50%;
 }
@@ -329,7 +338,7 @@ footer {
   padding: 1rem;
   margin-top: 30px;
   width: 100vw;
-  background-color: #21212A;
+  background-color: #21212a;
   font-size: 0.85rem;
   font-weight: lighter;
 }
@@ -352,32 +361,30 @@ footer {
 }
 
 @media screen and (max-width: 1060px) {
+  .techBox {
+    border: 3px solid rgb(236, 76, 76);
+    height: 6rem;
+    width: 7rem;
+  }
 
-.techBox {
-  border: 3px solid rgb(236, 76, 76);
-  height: 6rem;
-  width: 7rem;
-}
+  .techIcon {
+    width: 2.7rem;
+    margin: 10px;
+  }
 
-.techIcon {
-  width: 2.7rem;
-  margin: 10px;
-}
+  .filipImage {
+    width: 12rem;
+    border: 3px solid rgb(236, 76, 76);
+    margin: 30px;
+  }
 
-.filipImage {
-  width: 12rem;
-  border: 3px solid rgb(236, 76, 76);
-  margin: 30px;
-}
+  .projectPreview {
+    width: 30rem;
+  }
 
-.projectPreview {
-  width: 30rem;
-}
-
-.projectPreview {
-  width: 25rem;
-}
-
+  .projectPreview {
+    width: 25rem;
+  }
 }
 
 @media screen and (max-width: 910px) {
@@ -439,8 +446,8 @@ footer {
     margin-right: 0;
   }
 
-  .contactBox{
-  width: 80%;
+  .contactBox {
+    width: 80%;
   }
 
   .projectPreview {
@@ -486,10 +493,9 @@ footer {
     width: 5rem;
     font-size: 0.7rem;
   }
-  
+
   .techIcon {
     width: 2rem;
     margin: 8px;
   }
-  
 }
