@@ -8,8 +8,8 @@ import mongodbIcon from "../resources/mongodb.png";
 import nodeIcon from "../resources/node.png";
 import expressIcon from "../resources/express.png";
 import gitIcon from "../resources/git.png";
-import pythonIcon from "../resources/python.webp";
-import webpackIcon from "../resources/webpack.png";
+import typescriptIcon from "../resources/typescript.png";
+import postgresqlIcon from "../resources/postgresql.png";
 
 const About = React.forwardRef((props, ref) => {
   return (
@@ -38,8 +38,12 @@ const About = React.forwardRef((props, ref) => {
               <div>React</div>
             </div>
             <div className="techBox">
-              <img className="techIcon" src={pythonIcon} alt="Python"></img>
-              <div>Python</div>
+              <img
+                className="techIcon"
+                src={typescriptIcon}
+                alt="TypeScript"
+              ></img>
+              <div>TypeScript</div>
             </div>
           </div>
           <div className="techColumn">
@@ -56,8 +60,12 @@ const About = React.forwardRef((props, ref) => {
               <div>Git</div>
             </div>
             <div className="techBox">
-              <img className="techIcon" src={webpackIcon} alt="Webpack"></img>
-              <div>Webpack</div>
+              <img
+                className="techIcon"
+                src={postgresqlIcon}
+                alt="PostgreSQL"
+              ></img>
+              <div>PostgreSQL</div>
             </div>
           </div>
           <div className="techColumn">
