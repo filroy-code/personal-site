@@ -6,6 +6,7 @@ export const ActionButton = styled(Button)(() => ({
   color: "white",
   border: "1px solid rgb(236, 76, 76)",
   transition: "none",
+  margin: "5px",
   "&:hover": {
     backgroundColor: "rgb(186, 49, 49)",
     transition: "background-color 0.7s",

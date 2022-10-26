@@ -21,50 +21,69 @@ const Projects = React.forwardRef((props, ref) => {
               React-Flip-Toolkit, and AWS S3.
             </p>
           </div>
-          <div></div>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://sosh-media.netlify.app/", "_blank");
+            }}
+          >
+            <a
+              href="https://sosh-media.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live App
+            </a>
+          </ActionButton>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open(
+                "https://github.com/filroy-code/sosh-media-frontend",
+                "_blank"
+              );
+            }}
+          >
+            <a
+              href="https://github.com/filroy-code/sosh-media-frontend"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          </ActionButton>
+        </div>
+        <div className="rightProjectContainer">
           <a
             href="https://sosh-media.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
-            <ActionButton variant="contained">Live App</ActionButton>
-          </a>
-          <a
-            href="https://github.com/filroy-code/sosh-media-frontend"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ActionButton variant="contained">Learn More</ActionButton>
-          </a>
-        </div>
-        <a
-          href="https://sosh-media.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="rightProjectContainer">
             <img
               className="projectPreview"
               src={soshPreview}
               alt="Sosh App Preview"
             ></img>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
       <div className="classSpaceProject">
-        <a
-          href="https://class-space.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="leftProjectContainer">
+        <div className="leftProjectContainer">
+          <a
+            href="https://class-space.netlify.app/user"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               className="projectPreview"
               src={classSpacePreview}
               alt="Class-Space App Preview"
             ></img>
-          </div>
-        </a>
+          </a>
+        </div>
+
         <div className="projectTextContainer">
           <div className="projectPreviewText">
             <div className="projectTitle">Class-Space</div>
@@ -76,20 +95,39 @@ const Projects = React.forwardRef((props, ref) => {
             </p>
           </div>
           <div></div>
-          <a
-            href="https://class-space.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://class-space.netlify.app/user", "_blank");
+            }}
           >
-            <ActionButton variant="contained">Live App</ActionButton>
-          </a>
-          <a
-            href="https://github.com/filroy-code/class-space-frontend"
-            target="_blank"
-            rel="noreferrer"
+            <a
+              href="https://class-space.netlify.app/user"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live App
+            </a>
+          </ActionButton>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open(
+                "https://github.com/filroy-code/class-space-frontend",
+                "_blank"
+              );
+            }}
           >
-            <ActionButton variant="contained">Learn More</ActionButton>
-          </a>
+            <a
+              href="https://github.com/filroy-code/class-space-frontend"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          </ActionButton>
         </div>
       </div>
       <div className="nbaProject">
@@ -102,45 +140,66 @@ const Projects = React.forwardRef((props, ref) => {
             <p className="projectInfo">Built with React and D3.js.</p>
           </div>
           <div></div>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://nba-pct.netlify.app/", "_blank");
+            }}
+          >
+            <a
+              href="https://nba-pct.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live App
+            </a>
+          </ActionButton>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://github.com/filroy-code", "_blank");
+            }}
+          >
+            <a
+              href="https://github.com/filroy-code"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          </ActionButton>
+        </div>
+        <div className="rightProjectContainer">
           <a
             href="https://nba-pct.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
-            <ActionButton variant="contained">Live App</ActionButton>
-          </a>
-          <a
-            href="https://github.com/filroy-code"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ActionButton variant="contained">Learn More</ActionButton>
-          </a>
-        </div>
-        <a href="https://nba-pct.netlify.app/" target="_blank" rel="noreferrer">
-          <div className="rightProjectContainer">
             <img
               className="projectPreview"
               src={nbaAppPreview}
               alt="NBA Play Comparison Tool Preview"
             ></img>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
       <div className="cvAppProject">
-        <a
-          href="https://filroy-code.github.io/cv_app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="leftProjectContainer">
+        <div className="leftProjectContainer">
+          <a
+            href="https://filroy-code.github.io/cv_app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               className="projectPreview"
               src={cvAppPreview}
               alt="CV App Preview"
             ></img>
-          </div>
-        </a>
+          </a>
+        </div>
+
         <div className="projectTextContainer">
           <div className="projectPreviewText">
             <div className="projectTitle">CV Generator</div>
@@ -150,20 +209,36 @@ const Projects = React.forwardRef((props, ref) => {
             <p className="projectInfo">Built with React.</p>
           </div>
           <div></div>
-          <a
-            href="https://filroy-code.github.io/cv_app/"
-            target="_blank"
-            rel="noreferrer"
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://filroy-code.github.io/cv_app/", "_blank");
+            }}
           >
-            <ActionButton variant="contained">Live App</ActionButton>
-          </a>
-          <a
-            href="https://github.com/filroy-code"
-            target="_blank"
-            rel="noreferrer"
+            <a
+              href="https://filroy-code.github.io/cv_app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live App
+            </a>
+          </ActionButton>
+
+          <ActionButton
+            variant="contained"
+            onClick={() => {
+              window.open("https://github.com/filroy-code", "_blank");
+            }}
           >
-            <ActionButton variant="contained">Learn More</ActionButton>
-          </a>
+            <a
+              href="https://github.com/filroy-code"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More
+            </a>
+          </ActionButton>
         </div>
       </div>
     </div>
