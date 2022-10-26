@@ -217,6 +217,10 @@ nav {
   gap: 0rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .soshProject {
   display: flex;
   justify-content: space-between;
@@ -229,6 +233,14 @@ nav {
   justify-content: space-between;
   width: 100%;
   font-size: 3rem;
+}
+
+.classSpaceProject {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 3rem;
+  text-align: right;
 }
 
 .cvAppProject {
@@ -274,7 +286,17 @@ nav {
 
 .rightProjectContainer {
   display: flex;
-  background-color: rgb(131, 197, 190);
+  background-image: linear-gradient(
+    135deg,
+    rgb(24, 24, 29) 37.04%,
+    rgb(236, 76, 76) 37.04%,
+    rgb(236, 76, 76) 50%,
+    rgb(24, 24, 29) 50%,
+    rgb(24, 24, 29) 87.04%,
+    rgb(236, 76, 76) 87.04%,
+    rgb(236, 76, 76) 100%
+  );
+  background-size: 38.18px 38.18px;
   position: relative;
   padding: 1.5rem 0.7rem 1.5rem 4rem;
   margin-bottom: 5rem;
@@ -282,7 +304,17 @@ nav {
 
 .leftProjectContainer {
   display: flex;
-  background-color: rgb(131, 197, 190);
+  background-image: linear-gradient(
+    135deg,
+    rgb(24, 24, 29) 37.04%,
+    rgb(236, 76, 76) 37.04%,
+    rgb(236, 76, 76) 50%,
+    rgb(24, 24, 29) 50%,
+    rgb(24, 24, 29) 87.04%,
+    rgb(236, 76, 76) 87.04%,
+    rgb(236, 76, 76) 100%
+  );
+  background-size: 38.18px 38.18px;
   position: relative;
   padding: 1.5rem 4rem 1.5rem 0.7rem;
   margin-bottom: 5rem;
@@ -291,7 +323,12 @@ nav {
 .projectPreview {
   width: 55rem;
   border-radius: 5px;
-  border: 3px solid black;
+  border: 6px solid black;
+  transition: transform 0.4s;
+}
+
+.projectPreview:hover {
+  transform: scale(1.03);
 }
 
 #contact {

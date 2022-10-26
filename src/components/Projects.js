@@ -2,15 +2,10 @@ import React from "react";
 import soshPreview from "../resources/soshPreview.png";
 import cvAppPreview from "../resources/cvApp.png";
 import nbaAppPreview from "../resources/nbaAppPreview.png";
-import { Button } from "@mui/material";
+import classSpacePreview from "../resources/classSpacePreview.png";
+import { ActionButton } from "./ActionButton";
 
 const Projects = React.forwardRef((props, ref) => {
-  const buttonStyle = {
-    backgroundColor: "rgb(236, 76, 76)",
-    color: "white",
-    border: "1px solid rgb(236, 76, 76)",
-  };
-
   return (
     <div ref={ref} id="projects">
       <div className="sectionHeading">Projects</div>
@@ -22,8 +17,8 @@ const Projects = React.forwardRef((props, ref) => {
               A full-stack social-media platform.
             </div>
             <p className="projectInfo">
-              Modern functionality built with React, Node, Express, MongoDB,
-              Framer-Motion, React-Flip-Toolkit, and AWS S3.
+              Built with React, Node, Express, MongoDB, Framer-Motion,
+              React-Flip-Toolkit, and AWS S3.
             </p>
           </div>
           <div></div>
@@ -32,18 +27,14 @@ const Projects = React.forwardRef((props, ref) => {
             target="_blank"
             rel="noreferrer"
           >
-            <Button style={buttonStyle} variant="contained">
-              Live App
-            </Button>
+            <ActionButton variant="contained">Live App</ActionButton>
           </a>
           <a
             href="https://github.com/filroy-code/sosh-media-frontend"
             target="_blank"
             rel="noreferrer"
           >
-            <Button style={buttonStyle} variant="contained">
-              Learn More
-            </Button>
+            <ActionButton variant="contained">Learn More</ActionButton>
           </a>
         </div>
         <a
@@ -56,6 +47,82 @@ const Projects = React.forwardRef((props, ref) => {
               className="projectPreview"
               src={soshPreview}
               alt="Sosh App Preview"
+            ></img>
+          </div>
+        </a>
+      </div>
+      <div className="classSpaceProject">
+        <a
+          href="https://class-space.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="leftProjectContainer">
+            <img
+              className="projectPreview"
+              src={classSpacePreview}
+              alt="Class-Space App Preview"
+            ></img>
+          </div>
+        </a>
+        <div className="projectTextContainer">
+          <div className="projectPreviewText">
+            <div className="projectTitle">Class-Space</div>
+            <div className="projectSubheading">
+              A classroom management webapp.
+            </div>
+            <p className="projectInfo">
+              Built with React, TypeScript, PostgreSQL, Node, and D3.js.
+            </p>
+          </div>
+          <div></div>
+          <a
+            href="https://class-space.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ActionButton variant="contained">Live App</ActionButton>
+          </a>
+          <a
+            href="https://github.com/filroy-code/class-space-frontend"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ActionButton variant="contained">Learn More</ActionButton>
+          </a>
+        </div>
+      </div>
+      <div className="nbaProject">
+        <div className="projectTextContainer">
+          <div className="projectPreviewText">
+            <div className="projectTitle">NBA Player Comparison Tool</div>
+            <div className="projectSubheading">
+              A data-visualization tool for comparison of NBA player stats.
+            </div>
+            <p className="projectInfo">Built with React and D3.js.</p>
+          </div>
+          <div></div>
+          <a
+            href="https://nba-pct.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ActionButton variant="contained">Live App</ActionButton>
+          </a>
+          <a
+            href="https://github.com/filroy-code"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ActionButton variant="contained">Learn More</ActionButton>
+          </a>
+        </div>
+        <a href="https://nba-pct.netlify.app/" target="_blank" rel="noreferrer">
+          <div className="rightProjectContainer">
+            <img
+              className="projectPreview"
+              src={nbaAppPreview}
+              alt="NBA Play Comparison Tool Preview"
             ></img>
           </div>
         </a>
@@ -88,59 +155,16 @@ const Projects = React.forwardRef((props, ref) => {
             target="_blank"
             rel="noreferrer"
           >
-            <Button style={buttonStyle} variant="contained">
-              Live App
-            </Button>
+            <ActionButton variant="contained">Live App</ActionButton>
           </a>
           <a
             href="https://github.com/filroy-code"
             target="_blank"
             rel="noreferrer"
           >
-            <Button style={buttonStyle} variant="contained">
-              Learn More
-            </Button>
+            <ActionButton variant="contained">Learn More</ActionButton>
           </a>
         </div>
-      </div>
-      <div className="nbaProject">
-        <div className="projectTextContainer">
-          <div className="projectPreviewText">
-            <div className="projectTitle">NBA Player Comparison Tool</div>
-            <div className="projectSubheading">
-              A data-visualization tool for comparison of NBA player stats.
-            </div>
-            <p className="projectInfo">Built with React and D3.js.</p>
-          </div>
-          <div></div>
-          <a
-            href="https://nba-pct.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button style={buttonStyle} variant="contained">
-              Live App
-            </Button>
-          </a>
-          <a
-            href="https://github.com/filroy-code"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button style={buttonStyle} variant="contained">
-              Learn More
-            </Button>
-          </a>
-        </div>
-        <a href="https://nba-pct.netlify.app/" target="_blank" rel="noreferrer">
-          <div className="rightProjectContainer">
-            <img
-              className="projectPreview"
-              src={nbaAppPreview}
-              alt="NBA Play Comparison Tool Preview"
-            ></img>
-          </div>
-        </a>
       </div>
     </div>
   );
